@@ -38,10 +38,10 @@ ol {
 }
 
 .visually-hidden {
-  position: absolute;
+  opacity: 0;
   width: 1px;
   height: 1px;
-  margin: -1px;
+  margin: -3px;
   padding: 0;
   border: 0;
   clip: rect(0 0 0 0);
@@ -51,7 +51,9 @@ ol {
 /*content-----------------*/
 
 .content {
-  transform: translate(0, 25.4%);
+  position: relative;
+  top: 50%;
+  transform: translate(0, -50%);
   display: flex;
   gap: 30px;
 
