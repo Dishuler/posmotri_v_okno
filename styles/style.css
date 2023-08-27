@@ -155,14 +155,10 @@ ol {
 
 .search-form__pseudo-checkbox::before {
   content: "";
-  display: none;
-  position: absolute;
   width: 15px;
   height: 15px;
+  margin: 1px;
   background-color: #fff;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
 }
 
 .search-form__checkbox:checked ~ .search-form__pseudo-checkbox::before {
