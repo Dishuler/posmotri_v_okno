@@ -170,6 +170,8 @@ ol {
   height: 34px;
 
   color: #fff;
+  font-family: inherit;
+  line-height: normal;
   font-size: 18px;
   font-weight: 700;
   cursor: pointer;
