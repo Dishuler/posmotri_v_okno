@@ -16,6 +16,9 @@ html {
   font-size: 18px;
   background-color: #1b1919;
   margin: 0 auto;
+
+  display: flex;
+  align-items: center;
 }
 
 h1,
@@ -44,7 +47,7 @@ ol {
   margin: -3px;
   padding: 0;
   border: 0;
-  clip: rect(0 0 0 0);
+  clip-path: inset(0 0 0 0);
   overflow: hidden;
 }
 
@@ -52,12 +55,8 @@ ol {
 
 .content {
   position: relative;
-  top: 50%;
-  transform: translate(0, -50%);
   display: flex;
   gap: 30px;
-
-  height: 532px;
 }
 
 /*-----------------content*/
@@ -121,7 +120,7 @@ ol {
 
 .search-form__textfield {
   width: 225px;
-  font-family: "Fira Sans Condensed";
+  font-family: inherit;
 
   border: 1px solid #fff;
   border-left: none;
@@ -131,7 +130,6 @@ ol {
   color: rgba(255, 255, 255, 0.7);
   font-family: inherit;
   font-size: 18px;
-  word-spacing: -2px;
 }
 
 /*---------Input Text--------*/
@@ -139,7 +137,6 @@ ol {
 /*---------Checkbox--------*/
 
 .search-form__checkbox-list {
-  width: 212px;
   display: flex;
   gap: 13px;
 }
@@ -202,13 +199,10 @@ ol {
   flex-direction: column;
   justify-content: space-between;
   gap: 23px;
-
-  width: 399px;
-  height: 534px;
 }
 
 .title {
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 75px;
   font-weight: 700;
   line-height: 94%;
@@ -216,7 +210,7 @@ ol {
   display: block;
 }
 
-.title span {
+.content__accent {
   color: #545050;
 }
 
@@ -224,7 +218,8 @@ ol {
   position: relative;
 
   height: 298px;
-  overflow: scroll;
+  overflow-x: hidden;
+  overflow: auto;
   padding: 2px;
 }
 
@@ -257,7 +252,7 @@ ol {
 
 .content__video-card-title {
   color: #fff;
-  font-family: "Oswald";
+  font-family: "Oswald", sans-serif;
   font-size: 30px;
   font-weight: 700;
   line-height: 100%;
@@ -277,9 +272,8 @@ ol {
 
 .content__video-card-thumbnail {
   width: 194px;
-  height: 103px;
   flex: 0 0;
-  object-fit: cover;
+  object-fit: contain;
   object-position: center;
 }
 
@@ -311,9 +305,9 @@ ol {
 
 /*active-------------------*/
 
-.search-form__label:active .search-form__textfield {
+/* .search-form__label:active .search-form__textfield {
   outline: 1px solid #fff;
-}
+} */
 
 .search-form__checkbox:active ~ .search-form__pseudo-checkbox::before {
   display: block;
@@ -358,6 +352,7 @@ ol {
 
 .search-form__label:has(:focus-visible) {
   outline: 1px solid #fff;
+  outline-offset: 1px;
 }
 
 .button:focus-visible {
